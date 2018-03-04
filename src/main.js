@@ -3,12 +3,19 @@ import Vue from 'vue';
 // 导入路由相关包
 import VueRouter from 'vue-router';
 // 安装路由
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
+// 导入过滤器
+import './filters.js';
 
 //配置安装 vue-resource
 import VueResource from 'vue-resource';
 // 安装 VueResource
 Vue.use(VueResource)
+// 这是全局配置 请求 根路径的 ，必须放到 VueResource 注册之后
+Vue.http.options.root = 'http://vue.studyit.io'
+// 全局配置 post 提交时候，的表单 数据类型  为 application/x-www-form-urlencoded
+Vue.http.options.emulateJSON = true
 
 // 按需 导入自己需要的mint_ui组件
 import { Header, Swipe, SwipeItem } from 'mint-ui';

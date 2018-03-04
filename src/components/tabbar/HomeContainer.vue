@@ -45,7 +45,7 @@
         methods:{
             // 获取轮播图方法
             getLunbotu(){
-                this.$http.get('http://vue.studyit.io/api/getlunbo').then(result => {
+                this.$http.get('api/getlunbo').then(result => {
                     // 轮播图的数据，应该保存到 data 中
                     // console.log(result.body);
                     if (result.body.status === 0) {
