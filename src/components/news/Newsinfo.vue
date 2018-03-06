@@ -8,11 +8,19 @@
     </p>
     <hr />
     <div class="content" v-html="newsinfo.content"></div>
+
+    <!-- 评论子组件 -->
+    <comment-box :id="$route.params.id"></comment-box>
+
   </div>
 </template>
 
 <script>
 import { Toast } from "mint-ui";
+
+// 导入子组件
+import comment from "../subcomponents/comment.vue";
+
 export default {
   data() {
     return {
@@ -40,6 +48,10 @@ export default {
         }
       });
     }
+  },
+  components:{
+    // 注册自己的私有组件
+    "comment-box": comment
   }
 };
 </script>

@@ -18,12 +18,14 @@ Vue.http.options.root = 'http://vue.studyit.io'
 Vue.http.options.emulateJSON = true
 
 // 按需 导入自己需要的mint_ui组件
-import { Header, Swipe, SwipeItem } from 'mint-ui';
+import { Header, Swipe, SwipeItem, Button } from 'mint-ui';
 // 使用Vue.components 注册Header组件
 Vue.component(Header.name, Header);
 // 注册swiper组件
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+// 注册按钮
+Vue.component(Button.name, Button)
 
 // 导入 MUI 的样式表
 import './lib/mui/css/mui.min.css';
